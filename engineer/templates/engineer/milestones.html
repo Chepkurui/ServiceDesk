@@ -1,0 +1,111 @@
+{% extends "engineer/base.html" %} {% block content %}
+
+
+<!-- Breadcrumb-->
+<div class="breadcrumb-holder">
+  <div class="container-fluid">
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/engineer/">Dashboard</a></li>
+      <li class="breadcrumb-item active">Projects </li>
+    </ul>
+  </div>
+</div>
+<section>
+  <div class="container-fluid">
+    <!-- Page Header-->
+    <!--header> 
+      <h1 class="h3 display">Tables            </h1>
+    </header-->
+    <br/><br/>
+    <div class="row">
+      <div class="col-lg-12">
+          <div class="col-lg-12 col-md-12">
+              <!-- Recent Updates Widget          -->
+              <div id="new-updates" class="card updates recent-updated">
+                <div id="updates-header" class="card-header d-flex justify-content-between align-items-center">
+                  <h2 class="h5"><a data-toggle="collapse" data-parent="#new-updates" href="#updates-box" aria-expanded="true" aria-controls="updates-box">Project Milestones</a></h2><a data-toggle="collapse" data-parent="#new-updates" href="#updates-box" aria-expanded="true" aria-controls="updates-box"><i class="fa fa-angle-down"></i></a>
+                </div>
+                <div id="updates-box" role="tabpanel" class="collapse show">
+                  <ul class="news list-unstyled">
+                    <!-- Item-->
+                    <li class="d-flex justify-content-between"> 
+                      <div class="left-col d-flex">
+                        <div class="icon fa-lg"><i class="icon-rss-feed"></i></div>
+                        <div class="title"><strong>Inception</strong>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                      </div>
+                      <div class="right-col text-right">
+                        <div class="update-date">24<span class="month">Jan</span></div>
+                      </div>
+                    </li>
+                    <!-- Item-->
+                    <li class="d-flex justify-content-between"> 
+                      <div class="left-col d-flex">
+                        <div class="icon fa-lg"><i class="icon-rss-feed"></i></div>
+                        <div class="title"><strong>Requirements Gathering</strong>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                      </div>
+                      <div class="right-col text-right">
+                        <div class="update-date">24<span class="month">Jan</span></div>
+                      </div>
+                    </li>
+                    <!-- Item-->
+                    <li class="d-flex justify-content-between"> 
+                      <div class="left-col d-flex">
+                        <div class="icon fa-lg"><i class="icon-rss-feed"></i></div>
+                        <div class="title"><strong>System Design</strong>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                      </div>
+                      <div class="right-col text-right">
+                        <div class="update-date">24<span class="month">Jan</span></div>
+                      </div>
+                    </li>
+                    <!-- Item-->
+                    <li class="d-flex justify-content-between"> 
+                      <div class="left-col d-flex">
+                        <div class="icon fa-lg"><i class="icon-rss-feed"></i></div>
+                        <div class="title"><strong>System Implementatation</strong>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                      </div>
+                      <div class="right-col text-right">
+                        <div class="update-date">24<span class="month">Jan</span></div>
+                      </div>
+                    </li>
+                    <!-- Item-->
+                    <li class="d-flex justify-content-between"> 
+                      <div class="left-col d-flex">
+                        <div class="icon fa-lg"><i class="icon-rss-feed"></i></div>
+                        <div class="title"><strong>Uaser Acceptance Testing</strong>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                      </div>
+                      <div class="right-col text-right">
+                        <div class="update-date">24<span class="month">Jan</span></div>
+                      </div>
+                    </li>
+                    <!-- Item-->
+                    <li class="d-flex justify-content-between"> 
+                      <div class="left-col d-flex">
+                        <div class="icon fa-lg"><i class="icon-rss-feed"></i></div>
+                        <div class="title"><strong>Go-Live.</strong>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                      </div>
+                      <div class="right-col text-right">
+                        <div class="update-date">24<span class="month">Jan</span></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Recent Updates Widget End-->
+            </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
