@@ -1,0 +1,174 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sybyl Service Desk</title>
+    <meta charset="utf-8" />
+
+    <style type="text/css">
+        /*Vertical Tabs*/
+
+        .mdl-tabs__panel {
+            display: none;
+        }
+
+        .vertical-mdl-tabs {
+            margin-top: 30px;
+        }
+
+        .vertical-mdl-tabs .mdl-tabs__tab-bar {
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            padding-bottom: 35px;
+            height: inherit;
+            border-bottom: none;
+            border-right: 1px solid rgba(10, 11, 49, 0.20);
+        }
+
+        .vertical-mdl-tabs .mdl-tabs__tab {
+            width: 100%;
+            height: 35px;
+            line-height: 35px;
+            box-sizing: border-box;
+            letter-spacing: 2px;
+        }
+
+        .vertical-mdl-tabs .mdl-tabs__tab:hover {
+            background: rgba(158, 158, 158, 0.34);
+            color: black;
+        }
+
+        .vertical-mdl-tabs.mdl-tabs.is-upgraded a.mdl-tabs__tab.is-active {
+            border-right: 3px solid #ED462F;
+        }
+
+        .vertical-mdl-tabs.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
+            content: inherit;
+            height: 0;
+        }
+
+        .vertical-mdl-tabs.mdl-tabs.is-upgraded .mdl-tabs__panel.is-active,
+        .mdl-tabs__panel {
+            padding: 0 30px;
+        }
+
+        .vertical-mdl-tabs.mdl-tabs .mdl-tabs__tab {
+            text-align: left;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active {
+            color: #E21549;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'test/css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'test/css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'test/css/animate.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'test/css/material.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'test/css/material-icons.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'test/css/materialdesignicons.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'test/css/main.css' %}" />
+    <style type="text/css">
+        .panel-heading {
+            padding: 5px 37px !important;
+            background: none !important;
+            color: #fff !important;
+            text-decoration: none !important;
+            border-bottom: none !important;
+        }
+
+        .panel-group {
+            background: none !important;
+        }
+
+        .panel-default {
+            border: none;
+            background: none !important;
+        }
+
+        .panel-body {
+            padding: 0 !important;
+        }
+
+        th {
+            font-weight: bold !important;
+            font-size: 15px !important;
+            color: #111;
+        }
+
+        .top-dash .col-md-3 .thumbnail {
+            text-align: center;
+            /*      background: rgb(156, 155, 208);
+        border-radius: 0;
+        border:none;*/
+            color: #2D6CA2;
+        }
+
+        .top-dash .col-md-3 .thumbnail h5 {
+            margin: 10px 0 5px;
+        }
+
+        #fixed-header-drawer-exp {
+            border-bottom: 1px solid #aaa;
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header" style="background: #2D6CA2; box-shadow: none;">
+            <div class="mdl-layout__header-row">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder" style="width: 500px;">
+                        <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp" placeholder="Search Risks">
+                    </div>
+                </div>
+
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation my-top-menu">
+                    <a class="mdl-navigation__link" href="" style="font-size: 18px;">
+                        <i class="mdi mdi-lock"></i> Logout</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer" style="box-shadow: none !important; border:none !important; box-shadow: none !important; background:#181F24; color:#eee;">
+            <span class="mdl-layout-title" style="background:#cc1515 !important; font-size: 25px; padding-right: 15px;">Service Desk</span>
+            <nav class="mdl-navigation my-side-menu" style="margin-top:20px; padding:0;">
+                <h5 style="padding-left:20px; margin:0 0 10px; font-size: 14px;">ADMIN</h5>
+                <a class="mdl-navigation__link" href="dashboard.html" style="background: #111; color: #fff;">
+                    <i class="mdi mdi-view-grid"></i>Dashboard</a>
+                <h5 style="padding-left:20px; margin:0 0 10px; font-size: 14px;">MAIN MENU</h5>
+                <a class="mdl-navigation__link" href="dashboard.html" style="background: #111; color: #fff;">
+                    <i class="mdi mdi-view-grid"></i>Departments</a>
+                <a class="mdl-navigation__link" href="dashboard.html" style="background: #111; color: #fff;">
+                    <i class="mdi mdi-view-grid"></i>Projects</a>
+                <a class="mdl-navigation__link" href="dashboard.html" style="background: #111; color: #fff;">
+                    <i class="mdi mdi-view-grid"></i>Documents</a>
+                <a class="mdl-navigation__link" href="" style="color:#fff;">
+                    <i class="mdi mdi-chart-bar"></i> Reports</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+
+            {% block content %} {% endblock %}
+
+        </main>
+    </div>
+    <script type="text/javascript" src="{% static 'test/js/material.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'test/js/jquery-2.1.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'test/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

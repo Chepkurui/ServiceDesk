@@ -1,0 +1,9 @@
+{% if departments %}
+    <ul>
+    {% for department in departments %}
+        <li><a href="{% url 'supervisor:projects' department.id %}">{{ department.dpt_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Departments are available.</p>
+{% endif %}

@@ -1,0 +1,32 @@
+{% extends "test/base.html" %} {% block content %} {% if projects %}
+
+<h4 style="margin:0;">Projects</h4>
+<hr/>
+<table class="table table-bordered table-striped mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+    <thead>
+        <tr>
+            <th class="mdl-data-table__cell--non-numeric">Client</th>
+            <th class="mdl-data-table__cell--non-numeric">Solution</th>
+            <th class="mdl-data-table__cell--non-numeric">Status</th>
+            <th class="mdl-data-table__cell--non-numeric">Contact</th>
+    </thead>
+    <tbody>
+        {% for project in projects %}
+        
+            <tr>
+                <td class="mdl-data-table__cell--non-numeric">Client</td>
+                <td class="mdl-data-table__cell--non-numeric">
+                    <a href="/supervisor/projects/{{ project.id }}/">{{ project.pjt_name }}</a>
+                </td>
+                <td class="mdl-data-table__cell--non-numeric">Ongoing</td>
+                <td class="mdl-data-table__cell--non-numeric">Resource</td>
+            </tr>
+        
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<center>
+    <h1>No Projects are available.</h1>
+</center>
+{% endif %} {% endblock %}

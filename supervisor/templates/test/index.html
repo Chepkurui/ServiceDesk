@@ -1,0 +1,66 @@
+ {% extends "test/base.html" %} {% block content %}
+
+
+<h4 style="margin:0;">Dashboard</h4>
+<hr/>
+<div class="rows top-dash">
+    <div class="col-md-9" style="padding: 0;">
+
+
+        {% if departments %}
+        <!--ul-->
+        {% for department in departments %}
+        <a href="{% url 'supervisor:testprojects' department.id %}">
+            <div class="col-md-3" style="padding-left: 0;">
+                <div class="thumbnail">
+                    <h5 style="font-size: 13px;">{{ department.dpt_name }}</h5>
+                    <h3 style="font-size: 20px; margin:0;">1</h3>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+        <!--/ul-->
+        {% else %}
+        <div class="col-md-3" style="padding-left: 0;">
+            <div class="thumbnail">
+                <h5 style="font-size: 13px;">No Departments</h5>
+                <h3 style="font-size: 40px; margin:0;">0</h3>
+            </div>
+        </div>
+        {% endif %}
+
+
+    </div>
+</div>
+<table class="table table-bordered table-striped mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+    <thead>
+        <tr>
+            <th class="mdl-data-table__cell--non-numeric">Client</th>
+            <th class="mdl-data-table__cell--non-numeric">Solution</th>
+            <th class="mdl-data-table__cell--non-numeric">Status</th>
+            <th class="mdl-data-table__cell--non-numeric">Contact</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">UHI</td>
+            <td class="mdl-data-table__cell--non-numeric">Hospital Management System</td>
+            <td class="mdl-data-table__cell--non-numeric">Ongoing</td>
+            <td class="mdl-data-table__cell--non-numeric">Dickson</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">UMEME</td>
+            <td class="mdl-data-table__cell--non-numeric">HR Management System</td>
+            <td class="mdl-data-table__cell--non-numeric">Ongoing</td>
+            <td class="mdl-data-table__cell--non-numeric">Job</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">UPS</td>
+            <td class="mdl-data-table__cell--non-numeric">Prison Management System</td>
+            <td class="mdl-data-table__cell--non-numeric">Ongoing</td>
+            <td class="mdl-data-table__cell--non-numeric">Allan</td>
+        </tr>
+    </tbody>
+</table>
+
+
+{% endblock %}
